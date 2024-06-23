@@ -399,11 +399,11 @@
               <li><a href="#">Status <span>${shipment.status}</span></a></li>
             `
 
-          categoriesContainer.appendChild(listItem);
+          const statuses = document.querySelectorAll('.status_point');
 
-          const statuses = document.querySelectorAll('#status_point');
+          console.log("statues", statuses)
 
-          if (shipment.status === 'processing') {
+          if (shipment.status === 'processing' || shipment.status.toLowerCase() === 'created') {
             statuses[0].classList.add('active')
           }
 
