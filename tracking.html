@@ -246,6 +246,8 @@
                 <li class="step0 status_point text-center" id="step2">In Transit</li>
                 <li class="step0 status_point text-right" id="step3">Out for Delivery</li>
                 <li class="step0 status_point text-right" id="step4">Delivered</li>
+                <li class="step0 status_point text-right" id="step5">Arrived</li>
+                <li class="step0 status_point text-right" id="step4">Pickup</li>
               </ul>
             </div>
           </div>
@@ -417,6 +419,12 @@
 
           if (shipment.status === 'dispensed') {
             for (let i = 0; i < 4; i++) statuses[i].classList.add('active')
+          }
+          if (shipment.status === 'arrived') {
+            for (let i = 0; i < 5; i++) statuses[i].classList.add('active')
+          }
+          if (shipment.status === 'pickup') {
+            for (let i = 0; i < 6; i++) statuses[i].classList.add('active')
           }
 
         });
